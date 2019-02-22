@@ -21,6 +21,13 @@ article, footer, header, nav, section
     display: block;
 }
 
+/*Ajuste tipografías*/
+html
+{
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 body
 {
 	font-family: Arial, Helvetica, sans-serif;
@@ -32,12 +39,40 @@ body
 	overflow-y: scroll;
 }
 
+body, html
+{
+    height: 100%;
+}
+
+/*Color específico a la hacer selección*/
+::selection
+{
+  background-color: pink;
+  color: red;
+}
+
+
 a, a:hover, a:active
 {
     outline: none;
 }
 
-.ancho-maximo
+@media (max-width: 400px)
+{
+  .hero-image {height: 90vh;}
+}
+
+@media (min-width: 401px) and (max-width: 800px)
+{
+  .hero-image {height: 90vh;}
+}
+
+@media (min-width: 800px)
+{
+  .hero-image {height: 90vh;}
+}
+
+.maxwidth
 {
 	max-width: 1440px;
 	margin: 0 auto;
@@ -48,14 +83,14 @@ a, a:hover, a:active
   overflow: auto;
 }
 
-.fila
+.row-style
 {
-    max-width: 940px;
+    max-width: 90vw;
     margin: 0 auto;
     overflow: hidden;
 }
 
-.cabecera
+.header
 {
 	margin: 1vh auto auto auto;
 	height: 120px;
@@ -81,11 +116,6 @@ h1
   color: #ecf0f1;
 }
 
-body, html
-{
-    height: 100%;
-}
-
 /* Imagen Hero */
 .hero-image
 {
@@ -104,4 +134,69 @@ body, html
   top: 50vh;
   left: 50vw;
   color: #ecf0f1;
+}
+
+
+/*Botón conóceme*/
+.bt-header
+{
+  width: 100px;
+  font-size: 1em;
+  line-height: 1em;
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  border: 1px solid #ecf0f1;
+  border-radius: 10px;
+  -webkit-box-shadow: 2px 2px 1px undefinedpx #2c3e50;
+  box-shadow: 2px 2px 1px undefinedpx #2c3e50;
+}
+
+.bt-header:hover
+{
+  background-color: #ecf0f1;
+  color: #2c3e50;
+  -webkit-box-shadow:inset 2px 2px 1px undefinedpx #2c3e50;
+  box-shadow:inset 2px 2px 1px undefinedpx #2c3e50;
+}
+
+/*Navegación principal*/
+.main-nav
+{
+  width: 90vw;
+  margin: auto;
+  padding: 0;
+}
+
+ul.horizontal-flex
+{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+ul.horizontal-flex li
+{
+  flex-grow: 1;
+}
+
+ul.horizontal-flex li a
+{
+  background-color:  #2c3e50;
+  color: #ecf0f1;
+  display: block;
+  text-align: center;
+  margin-right: 2px;
+  padding: 0.5em;
+  text-decoration: none;
+  -webkit-box-shadow: 2px 2px 1px undefinedpx #2c3e50;
+  box-shadow: 2px 2px 1px undefinedpx #2c3e50;
+}
+
+ul.horizontal-flex li a:hover
+{
+  background-color: #ecf0f1;
+  color: #2c3e50;
+  -webkit-box-shadow:inset 2px 2px 1px undefinedpx #2c3e50;
+  box-shadow:inset 2px 2px 1px undefinedpx #2c3e50;
 }
